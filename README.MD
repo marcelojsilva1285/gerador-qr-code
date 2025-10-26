@@ -1,0 +1,1 @@
+# https://quickchart.io/documentation/qr-codes/
