@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* === Cores de Fundo === */
+
+  /**
+   * Cor de fundo principal da página (o tom mais externo).
+   * @uso: body
+   */
+  --color-background-page: #F8F9FF;
+
+  /**
+   * Cor de fundo dos containers/cards principais.
+   * @uso: Fundo do card do gerador.
+   */
+  --color-background-surface: #FFFFFF;
+
+  /**
+   * Cor de fundo para campos de input (como "Cor do fundo").
+   * @uso: Input de cor, campos de texto.
+   */
+  --color-background-input: #FFFFFF;
+
+  /* === Cores de Texto === */
+
+  /**
+   * Cor de texto principal (títulos, texto escuro).
+   * @uso: "Gere e costumize..."
+   */
+  --color-text-primary: #1A202C; /* Um preto/cinza-escuro suave */
+
+  /**
+   * Cor de texto secundária (labels, placeholders).
+   * @uso: "Digite seu link", "Cores", "Tamanho da Logo".
+   */
+  --color-text-secondary: #718096; /* Cinza médio */
+  /**
+   * Cor de texto para usar sobre fundos de cor primária.
+   * @uso: Texto "Baixar QR Code" dentro do botão roxo.
+   */
+  --color-text-on-primary: #FFFFFF;
+
+  /* === Cores de Ação (Primárias) === */
+
+  /**
+   * Cor de destaque principal (marca).
+   * @uso: Botões principais, texto "dinâmicos".
+   */
+  --color-primary: #6A35F2; /* Tom de roxo/índigo vibrante */
+
+  /* === Cores de Borda e UI === */
+
+  /**
+   * Cor para bordas de inputs e dropdowns.
+   * @uso: Borda do campo "Digite seu link", borda do seletor de tamanho.
+   */
+  --color-border-input: #E2E8F0; /* Cinza bem claro */
+
+  /* === Cores Padrão (QR Code) === */
+
+  /**
+   * Cor padrão para os "pixels" do QR code.
+   * @uso: Cor do QR code em si.
+   */
+  --color-qr-dark: #000000;
+
+  /**
+   * Cor padrão para o fundo do QR code.
+   * @uso: Fundo do preview do QR code.
+   */
+  --color-qr-light: #FFFFFF;
+}
+
+body{
+  font-family: 'Arial', sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-page);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  margin-top: 50px;
+  text-align: center;
+
+  h1{
+    font-size: 2em;
+  }
+
+  span{
+    color: var(--color-primary);
+  }
+}
+
+main{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-background-surface) ;
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  
+}
+
+.qr-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qr-input__label{
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.qr-input__field{
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border-input);
+  font-size: 1em;
+  outline-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.qr-preview{
+  text-align: center;
+  
+}
+
+.qr-preview__title{
+  font-weight: 100;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.qr-preview img{
+  width: 70%;
+}
+
+.qr-options{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.color-settings{
+ display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+
+}
+
+.color-settings__title{
+  grid-column: span 2;
+  
+}
+
+ label{
+  font-size: 0.9rem;  
+}
+
+.color-settings__input{
+  margin: 8px 0;
+  width: 100%;
+}
+
+
+.logo-settings__title{
+  margin-bottom: 10px;
+}
+
+
+.logo-settings__upload::file-selector-button{
+  padding: 10px 5px;
+  color: var(--color-text-on-primary);
+  border: none;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  font-weight: bold;
+  /* width: 40%; */
+  margin-top: 5px;
+  margin-bottom: 20px; ;
+}
+
+.logo-settings__size{
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border-input);
+  outline-color: var(--color-primary);
+  
+}
+
+.btn{
+  padding: 10px;
+  border: 1px solid var(--color-border-input);
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-weight: bold;
+  margin-top: 10px;
+}

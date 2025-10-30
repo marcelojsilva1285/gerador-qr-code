@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerardor de qrCode</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Gere e customize QR Codes dinâmicos</h1>
+    <h1>Gere e customize QR Codes <span>dinâmicos</span></h1>
   </header>
 
   <main class="qr-generator">
     <section class="qr-input">
       <label for="qr-link" class="qr-input__label">Digite seu link</label>
       <input id="qr-link" class="qr-input__field" type="text" placeholder="Seu link aqui">
-      <div qr-preview></div>
-      <!-- Compo de link + preview -->
+      <div class="qr-preview">
+        <!-- Compo de link + preview -->
+         <h5 class="qr-preview__title">QR Code preview</h5>
+        <img src="https://quickchart.io/qr?text=Here%27s%20my%20text&centerImageUrl=https://cdn-icons-png.flaticon.com/512/1389/1389234.png&centerImageSizeRatio=0.75" alt="" srcset="">
+      </div>
+
     </section>
 
     <section class="qr-options">
@@ -28,14 +33,15 @@
         </div>
         <div class="color-settings__group">
           <label>Cor do fundo</label>
-          <input type="color" class="color-settings__input">
+          <input type="color" value="#ffffff" class="color-settings__input">
         </div>
       </div>
 
       <div class="log-settings">
         <h2 class="logo-settings__title">Logo</h2>
         <label>Insira seu Logo</label>
-        <input type="file" class="logo-settings__upload">
+        <input type="file" class="logo-settings__upload" accept="image/png, image/jpeg">
+         
         <label>Tamanho da logo</label>
         <select class="logo-settings__size">
           <option value="38px">38px x 38px</option>
