@@ -18,7 +18,7 @@
       <div class="qr-preview">
         <!-- Compo de link + preview -->
          <h5 class="qr-preview__title">QR Code preview</h5>
-        <img src="https://quickchart.io/qr?text=Here%27s%20my%20text&centerImageUrl=https://cdn-icons-png.flaticon.com/512/1389/1389234.png&centerImageSizeRatio=0.75" alt="" srcset="">
+        <img id="qr-preview" src="https://quickchart.io/qr?text=Here%27s%20my%20text&dark=f00&light=0ff&ecLevel=Q&format=svg" alt="" srcset="">
       </div>
 
     </section>
@@ -28,30 +28,21 @@
       <div class="color-settings">
         <h2 class="color-settings__title">Cores</h2>
         <div class="color-settings__group">
-          <label>Cor do qrcode</label>
-          <input type="color" class="color-settings__input">
+          <label for="color-qr">Cor do qrcode</label>
+          <input type="color" value="#f00000" id="color-qr" class="color-settings__input">
         </div>
         <div class="color-settings__group">
-          <label>Cor do fundo</label>
-          <input type="color" value="#ffffff" class="color-settings__input">
+          <label for="color-background">Cor do fundo</label>
+          <input type="color" value="#0fffff" id="color-background" class="color-settings__input">
         </div>
       </div>
-
-      <div class="log-settings">
-        <h2 class="logo-settings__title">Logo</h2>
-        <label>Insira seu Logo</label>
-        <input type="file" class="logo-settings__upload" accept="image/png, image/jpeg">
-         
-        <label>Tamanho da logo</label>
-        <select class="logo-settings__size">
-          <option value="38px">38px x 38px</option>
-        </select>
-      </div>
-
-      <button class="btn btn--primary">Baixar QR Code</button>
+      <a ></a>
+      <a href="" target="_blank" id="btn-share" class="btn btn--primary">Compartilhar QR Code</a>
     </section>
   </main>
 
 <footer></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
